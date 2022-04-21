@@ -1,0 +1,28 @@
+name: ruby-feroxbuster
+summary: A Ruby interface to feroxbuster.
+description:
+  A Ruby interface to feroxbuster, a simple, fast, recursive content discovery
+  tool written in Rust.
+
+license: MIT
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: https://github.com/postmodern/ruby-feroxbuster#readme
+has_yard: true
+
+metadata:
+  documentation_uri: https://rubydoc.info/gems/ruby-feroxbuster
+  source_code_uri:   https://github.com/postmodern/ruby-feroxbuster
+  bug_tracker_uri:   https://github.com/postmodern/ruby-feroxbuster/issues
+  changelog_uri:     https://github.com/postmodern/ruby-feroxbuster/blob/master/ChangeLog.md
+  rubygems_mfa_required: 'true'
+
+required_ruby_version: ">= 2.0.0"
+
+requirements: feroxbuster >= 2.7.0
+
+dependencies:
+  command_mapper: ~> 0.2
+
+development_dependencies:
+  bundler: ~> 2.0
