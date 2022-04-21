@@ -16,8 +16,11 @@ tool written in Rust.
 
 * Provides a [Ruby interface][Feroxbuster::Command] for running the
   `feroxbuster` command.
+* Supports [parsing][Feroxbuster::OtuputFile] feroxbuster `.txt` and `.json`
+  output files.
 
 [Feroxbuster::Command]: https://rubydoc.info/gems/ruby-feroxbuster/Feroxbuster/Command
+[Feroxbuster::OutputFile]: https://rubydoc.info/gems/ruby-amass/Feroxbuster/OutputFile
 
 ## Examples
 
