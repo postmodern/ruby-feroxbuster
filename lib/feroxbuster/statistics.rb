@@ -1,4 +1,8 @@
 module Feroxbuster
+  #
+  # Represents the statistics data, parsed from the last line of a `.json`
+  # output file.
+  #
   class Statistics
 
     # @return [Integer]
@@ -99,6 +103,70 @@ module Feroxbuster
 
     #
     # Initializes the statistics object.
+    #
+    # @param [Integer] timeouts
+    #
+    # @param [Integer] requests
+    #
+    # @param [Integer] expected_per_scan
+    #
+    # @param [Integer] total_expected
+    #
+    # @param [Integer] errors
+    #
+    # @param [Integer] successes
+    #
+    # @param [Integer] redirects
+    #
+    # @param [Integer] client_errors
+    #
+    # @param [Integer] server_errors
+    #
+    # @param [Integer] total_scans
+    #
+    # @param [Integer] initial_targets
+    #
+    # @param [Integer] links_extracted
+    #
+    # @param [Integer] extensions_collected
+    #
+    # @param [Integer] status_200s
+    #
+    # @param [Integer] status_301s
+    #
+    # @param [Integer] status_302s
+    #
+    # @param [Integer] status_401s
+    #
+    # @param [Integer] status_403s
+    #
+    # @param [Integer] status_429s
+    #
+    # @param [Integer] status_500s
+    #
+    # @param [Integer] status_503s
+    #
+    # @param [Integer] status_504s
+    #
+    # @param [Integer] status_508s
+    #
+    # @param [Integer] wildcards_filtered
+    #
+    # @param [Integer] responses_filtered
+    #
+    # @param [Integer] resources_discovered
+    #
+    # @param [Integer] url_format_errors
+    #
+    # @param [Integer] redirection_errors
+    #
+    # @param [Integer] connection_errors
+    #
+    # @param [Integer] request_errors
+    #
+    # @param [Array<Float>] directory_scan_times
+    #
+    # @param [Array<Float>] total_runtime
     #
     def initialize(timeouts: 0,
                    requests: 0,
