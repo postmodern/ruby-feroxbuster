@@ -3,7 +3,7 @@ require 'feroxbuster/response'
 module Feroxbuster
   module Parsers
     #
-    # Parses single-line reponse data.
+    # Parses single-line response data.
     #
     # @api semipublic
     #
