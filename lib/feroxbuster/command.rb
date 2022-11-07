@@ -30,7 +30,7 @@ module Feroxbuster
         value = value.to_s
 
         unless value =~ /\A\d+(?:m|s|ms|ns)\z/
-          return [false, "must be a number and end with 'm', 's', 'ms', or 'ns'"]
+          return [false, "must be a number and end with 'ns', 'ms', 's', or 'm'"]
         end
 
         return true

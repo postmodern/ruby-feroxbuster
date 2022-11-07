@@ -36,9 +36,9 @@ describe Feroxbuster::Command do
         context "when given a number" do
           let(:value) { "10" }
 
-          it "must return [false, \"must be a number and end with 'm', 's', 'ms', or 'ns'\"]" do
+          it "must return [false, \"must be a number and end with 'ns', 'ms', 's', or 'm'\"]" do
             expect(subject.validate(value)).to eq(
-              [false, "must be a number and end with 'm', 's', 'ms', or 'ns'"]
+              [false, "must be a number and end with 'ns', 'ms', 's', or 'm'"]
             )
           end
         end
@@ -78,9 +78,9 @@ describe Feroxbuster::Command do
         context "when given a number that ends with an unrecognized unit" do
           let(:value) { "10x" }
 
-          it "must return [false, \"must be a number and end with 'm', 's', 'ms', or 'ns'\"]" do
+          it "must return [false, \"must be a number and end with 'ns', 'ms', 's', or 'm'\"]" do
             expect(subject.validate(value)).to eq(
-              [false, "must be a number and end with 'm', 's', 'ms', or 'ns'"]
+              [false, "must be a number and end with 'ns', 'ms', 's', or 'm'"]
             )
           end
         end
