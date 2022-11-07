@@ -43,21 +43,45 @@ describe Feroxbuster::Command do
           end
         end
 
-        context "when given a number that ends with a unit" do
+        context "when given a number that ends with 'ns'" do
+          let(:value) { "10ns" }
+
+          it "must return true" do
+            expect(subject.validate(value)).to be(true)
+          end
+        end
+
+        context "when given a number that ends with 'ms'" do
+          let(:value) { "10ms" }
+
+          it "must return true" do
+            expect(subject.validate(value)).to be(true)
+          end
+        end
+
+        context "when given a number that ends with 's'" do
           let(:value) { "10s" }
 
           it "must return true" do
             expect(subject.validate(value)).to be(true)
           end
+        end
 
-          context "but the unit isn't recognized" do
-            let(:value) { "10x" }
+        context "when given a number that ends with 'm'" do
+          let(:value) { "10m" }
 
-            it "must return [false, \"must be a number and end with 'm', 's', 'ms', or 'ns'\"]" do
-              expect(subject.validate(value)).to eq(
-                [false, "must be a number and end with 'm', 's', 'ms', or 'ns'"]
-              )
-            end
+          it "must return true" do
+            expect(subject.validate(value)).to be(true)
+          end
+        end
+
+        context "when given a number that ends with an unrecognized unit" do
+          let(:value) { "10x" }
+
+          it "must return [false, \"must be a number and end with 'm', 's', 'ms', or 'ns'\"]" do
+            expect(subject.validate(value)).to eq(
+              [false, "must be a number and end with 'm', 's', 'ms', or 'ns'"]
+            )
           end
         end
       end
